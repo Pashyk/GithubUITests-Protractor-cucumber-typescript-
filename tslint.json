@@ -1,0 +1,102 @@
+{
+  "defaultSeverity": "error",
+  "extends": [
+    "tslint:recommended",
+    "tslint-eslint-rules"
+  ],
+  "jsRules": {},
+  "rulesDirectory": [
+    "node_modules/tslint-eslint-rules/dist/rules"
+  ],
+  "rules": {
+    "whitespace": [
+      true,
+      "check-branch",
+      "check-decl",
+      "check-operator",
+      "check-separator",
+      "check-type",
+      "check-module"
+    ],
+    "indent": [
+      true,
+      "tabs",
+      4
+    ],
+    "quotemark": [
+      true,
+      "single"
+    ],
+    "trailing-comma": [
+      true,
+      {
+        "multiline": "never",
+        "singleline": "never"
+      }
+    ],
+    "interface-name": [
+      true,
+      "never-prefix"
+    ],
+    "array-type": [
+      true,
+      "generic"
+    ],
+    "object-literal-sort-keys": false,
+    "ordered-imports": true,
+    "only-arrow-functions": [
+      true,
+      "allow-named-functions"
+    ],
+    "variable-name": [
+      true,
+      "ban-keywords",
+      "check-format",
+      "allow-leading-underscore"
+    ],
+    "member-ordering": [
+      true,
+      {
+        "order": [
+          "private-static-field",
+          "protected-static-field",
+          "public-static-field",
+          "private-instance-field",
+          "protected-instance-field",
+          "public-instance-field",
+          "private-static-method",
+          "protected-static-method",
+          "public-static-method",
+          "private-instance-method",
+          "protected-instance-method",
+          "public-instance-method"
+        ]
+      }
+    ],
+    "max-line-length": [
+      true,
+      {
+        "limit": 120,
+        "ignore-pattern": "^import |^export {(.*?)}"
+      }
+    ],
+    "no-return-await": true,
+    "jsdoc-format": [
+      true,
+      "check-multiline-start"
+    ],
+    "no-redundant-jsdoc": true,
+    "arrow-parens": [
+      true,
+      "ban-single-arg-parens"
+    ],
+    "align": [
+      true,
+      "arguments",
+      "elements",
+      "members",
+      "statements"
+    ],
+    "no-irregular-whitespace": true
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "githubautomation",
+  "version": "1.0.0",
+  "description": "github login test project",
+  "scripts": {
+    "pretest": "npm run tsc && npm run wd-update && npm run wd-start",
+    "test": "protractor ts/conf.js",
+    "posttest": "npm run wd-stop && npm run clean",
+    "tsc": "tsc",
+    "clean": "rimraf ts/",
+    "wd-update": "webdriver-manager update --gecko false",
+    "wd-start": "webdriver-manager start --detach",
+    "wd-clean": "webdriver-manager clean",
+    "wd-stop": "webdriver-manager shutdown"
+  },
+  "dependencies": {
+    "chai": "^4.2.0",
+    "cucumber": "^5.1.0",
+    "protractor": "^5.4.2",
+    "protractor-cucumber-framework": "^6.1.1",
+    "typescript": "3.6.2"
+  },
+  "devDependencies": {
+    "rimraf": "^2.6.2",
+    "@types/chai": "^4.1.7",
+    "@types/cucumber": "^4.0.5",
+    "@types/node": "^12.11.7",
+    "ts-node": "^8.3.0",
+    "prettier": "1.16.4",
+    "tslint": "^5.13.1",
+    "tslint-eslint-rules": "^5.4.0"
+  },
+  "author": "Pashyk",
+  "license": "MIT"
+}
