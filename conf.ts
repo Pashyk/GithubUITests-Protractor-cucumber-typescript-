@@ -9,7 +9,7 @@ export const config: Config = {
 		},
 	},
 	cucumberOpts: {
-		require: ['./steps/*.js'],
+		require: ['./steps/*.js', './features/support/*.js'],
 	},
 	SELENIUM_PROMISE_MANAGER: false,
 	waitForAngularEnabled: false,

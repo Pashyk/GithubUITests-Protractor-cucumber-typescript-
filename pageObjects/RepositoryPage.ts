@@ -21,8 +21,14 @@ export class RepositoryPage {
 		}
 	}
 
-	public async readmeFilePresence(): Promise<Boolean> {
-		return this.readmeFile.isPresent();
+	public async readmeFilePresence(): Promise<Boolean | undefined> {
+		let result;
+		try {
+			result = await this.readmeFile.isPresent();
+		} catch (error) {
+			console.log(error);
+		}
+		return result;
 	}
 }
 module.exports = RepositoryPage;

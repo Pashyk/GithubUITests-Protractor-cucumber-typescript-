@@ -9,3 +9,7 @@ Feature: I login to github.com and creating new repository
   Scenario: Creating repository
     When I create new repository "test"
     Then I check readme.md file was created
+
+  Scenario: Deleting repository
+    When I delete repository "test"
+    Then I check repository "test" was deleted
