@@ -30,7 +30,7 @@ export class LoggedInPage {
 			await helper.waitTillClickable(this.deleteConfirmationBtn);
 			await helper.clickOnElement(this.deleteConfirmationBtn);
 		} catch (error) {
-			console.error(error);
+			console.log(error);
 		}
 	}
 
