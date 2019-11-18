@@ -6,6 +6,7 @@ const basePage = new (require('../pageObjects/BasePage'))();
 const productionPage = new (require('../pageObjects/LoggedInPage'))();
 const repository = new (require('../pageObjects/RepositoryPage'))();
 
+
 Given('I open web-page', (): Promise<void> => basePage.open());
 When(
 	'I enter e-mail {string} and password {string}',

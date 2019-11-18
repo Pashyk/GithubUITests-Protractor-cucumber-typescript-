@@ -9,6 +9,7 @@ export const config: Config = {
 		},
 	},
 	cucumberOpts: {
+		format: ['progress'],
 		require: ['./steps/*.js', './features/support/*.js'],
 	},
 	SELENIUM_PROMISE_MANAGER: false,

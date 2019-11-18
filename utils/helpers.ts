@@ -6,7 +6,7 @@ export class Helpers {
 	email: ElementFinder = $('#login_field');
 	singIn: ElementFinder = $('input[type="submit"]');
 
-	public async clickOnElement(element: ElementFinder, timeout: number = 5000): Promise<void> {
+	public async clickOnElement(element: ElementFinder, timeout: number = 10000): Promise<void> {
 		try {
 			await this.waitForElement(element, timeout);
 		} catch (error) {
@@ -25,7 +25,7 @@ export class Helpers {
 		return text;
 	}
 
-	public async inputText(element: ElementFinder, text: string, timeout: number = 5000): Promise<void> {
+	public async inputText(element: ElementFinder, text: string, timeout: number = 10000): Promise<void> {
 		try {
 			this.waitForElement(element, timeout);
 		} catch (error) {
@@ -45,7 +45,7 @@ export class Helpers {
 		return this.clickOnElement(this.singIn);
 	}
 
-	public async waitTillClickable(element: ElementFinder, timeout: number = 5000): Promise<ElementFinder> {
+	public async waitTillClickable(element: ElementFinder, timeout: number = 10000): Promise<ElementFinder> {
 		try {
 			await browser.wait(EC.elementToBeClickable(element), timeout);
 		} catch (error) {
@@ -54,7 +54,7 @@ export class Helpers {
 		return element;
 	}
 
-	public async waitForElement(element: ElementFinder, timeout: number = 5000): Promise<ElementFinder> {
+	public async waitForElement(element: ElementFinder, timeout: number = 10000): Promise<ElementFinder> {
 		try {
 			await browser.wait(EC.visibilityOf(element), timeout);
 		} catch (error) {
