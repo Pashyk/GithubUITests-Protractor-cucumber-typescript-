@@ -2,15 +2,15 @@ import { $, browser, ElementFinder, ExpectedConditions as EC } from 'protractor'
 const basePage = new (require('../pageObjects/BasePage'))();
 
 export class Helpers {
-	password: ElementFinder = $('#password');
-	email: ElementFinder = $('#login_field');
-	singIn: ElementFinder = $('input[type="submit"]');
+	private password: ElementFinder = $('#password');
+	private email: ElementFinder = $('#login_field');
+	private singIn: ElementFinder = $('input[type="submit"]');
 
 	public async clickOnElement(element: ElementFinder, timeout: number = 10000): Promise<void> {
 		try {
 			await this.waitForElement(element, timeout);
 		} catch (error) {
-			console.log(error);
+			console.log(error, `Can't find an element ${element}`);
 		}
 		return element.click();
 	}
