@@ -18,7 +18,7 @@ export class RepositoryPage {
 			await helper.clickOnElement(this.createRepositoryButton);
 			await console.log(`Repository "${repositoryName}" was created`);
 		} catch (error) {
-			console.log(error, `\nRepository ${repositoryName} was not created`);
+			console.log(error, `Repository ${repositoryName} was not created`);
 		}
 	}
 
