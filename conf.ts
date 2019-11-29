@@ -9,9 +9,19 @@ export const config: Config = {
 		},
 	},
 	cucumberOpts: {
-		format: ['progress'],
+		format: ['json:.tmp/results.json'],
 		require: ['./steps/*.js', './features/support/*.js'],
 	},
+	plugins: [{
+		package: 'protractor-multiple-cucumber-html-reporter-plugin',
+		options:{
+			automaticallyGenerateReport: true,
+			removeExistingJsonReportFile: true,
+			displayDuration:true,
+			displayLog:true,
+			removeOriginalJsonReportFile: true
+		}
+	}],
 	SELENIUM_PROMISE_MANAGER: false,
 	waitForAngularEnabled: false,
 	framework: 'custom',
