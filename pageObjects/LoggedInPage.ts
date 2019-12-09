@@ -23,7 +23,7 @@ class LoggedInPage {
 			profileName = await helper.getTextFromElement(this.userProfileName);
 			if (profileName === username) console.log(`User "${username}" logged in successfully`);
 		} catch (error) {
-			console.log(error, `\nLogin as user '${username}' was unsuccessful`);
+			console.log(error, `Login as user '${username}' was unsuccessful`);
 		}
 		return profileName;
 	}
@@ -33,11 +33,11 @@ class LoggedInPage {
 			await helper.clickOnElement(LoggedInPage.repoLink(repositoryName));
 			await helper.clickOnElement(LoggedInPage.repoSettings(repositoryName));
 			await helper.clickOnElement(this.deleteRepositoryBtn);
-			await helper.inputText(this.deleteConfirmationField, repositoryName);
+			await helper.inputText(this.deleteConfirmationField, `testJSautomationTS/${repositoryName}`);
 			await helper.waitTillClickable(this.deleteConfirmationBtn);
 			await helper.clickOnElement(this.deleteConfirmationBtn);
 		} catch (error) {
-			console.log(error, `\nCan't delete repository "${repositoryName}"`);
+			console.log(error, `Can't delete repository "${repositoryName}"`);
 		}
 	}
 
